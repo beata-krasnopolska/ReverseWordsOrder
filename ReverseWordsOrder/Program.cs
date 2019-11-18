@@ -19,12 +19,13 @@ namespace ReverseWordsOrder
             string sentence_3 = "The dog is big.";
 
             var reverser = new Reverser();
-            var reverseWords = reverser.ReverseOrder(sentence_2);
+            var reverseWords_1 = reverser.ReverseOrder(sentence_1);
+            var reverseWords_2 = reverser.ReverseOrder(sentence_2);
+            var reverseWords_3 = reverser.ReverseOrder(sentence_3);
 
-            foreach (var i in reverseWords)
-            {
-                Console.Write(i);
-            }
+            Console.WriteLine(reverseWords_1);
+            Console.WriteLine(reverseWords_2);
+            Console.WriteLine(reverseWords_3);
 
             Console.ReadKey();
         }

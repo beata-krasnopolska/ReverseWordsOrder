@@ -10,24 +10,20 @@ namespace ReverseWordsOrder
     {
         public string ReverseOrder(string sentence)
         {
-            var words = sentence.Split(' '); //.Where(c => c.Length > 5).Reverse();
-            //var toReverse = words.Where(c => c.Length > 5).Reverse();
+            var words = sentence.Split(' ');
+
+            string text = string.Empty;
+
             foreach (var word in words)
             {
                 if (word.Length > 5)
                 {
-                    char[] charArray = word.ToCharArray();
-                    Array.Reverse(charArray);
-                    return new string(charArray);
+                    text += string.Concat(word.Reverse()) + " ";
+                    continue;
                 }
-                else
-                {
-                    return word;
-                }
+                text += word + " ";
             }
-            
-            var finalString = String.Join(" ", words);
-            return finalString;
+            return text;
         }
     }
 }
